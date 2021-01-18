@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Alata: 'Alata', sans-serif;
+    --josefin: 'Josefin Sans', sans-serif;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.5rem;
+    font-family: var(--Alata);
+}
+/* general styling */
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+}
+/* header styling */
+.header{
+    width: 100%;
+    height: 100vh;
+    color: hsl(0, 0%, 100%);
+}
+#bg-hero{
+    background-image: url('./images/desktop/image-hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.container{
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10rem;
+}
+.main-nav{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+.close, .burger{
+    display: none;
+    cursor: pointer;
+
+}
+.hero-text{
+    width: 30rem;
+    font-size: 3.2rem;
+    border: 1px solid hsl(0, 0%, 100%);
+    padding: 20px;
+    letter-spacing: 2.0px;
+    font-family: var(--josefin);
+    text-transform: uppercase;
+    transform: translateY(20vh);
+    line-height: 1.5;
+}
+/* End of header styling */
+
+
+@media screen and (max-width: 1024px){
+    .main-nav{
+        display: flex;
+        width: 60%;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .logo{
+        position: relative;
+        z-index: 2;
+    }
+    .main-nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: hsl(0, 0%, 0%);
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        z-index: 1;
+        text-transform: uppercase;
+        font-family: var(--josefin);
+        font-size: 2rem;
+        transform: translateX(-200rem);
+    }
+    .show{
+        transform: translateX(0);
+    }
+    .main-nav li{
+        margin: 2rem 1rem;
+        letter-spacing: 0.1rem;
+    }
+     .burger{
+        display: block;
+        position: relative;
+        z-index: 2;
+    }
+}
