@@ -112,5 +112,22 @@ a{
         display: block;
         position: relative;
         z-index: 2;
+        cursor: pointer;
+    }
+    .show-close{
+        display: block;
+        position: relative;
+        z-index: 2;
+    }
+    .hero-text{
+        transform: translateY(30vh);
+    }
+}
+@media screen and (max-width: 576px){
+    #bg-hero{
+        background-image: url('./images/mobile/image-hero.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
     }
 }
