@@ -52,6 +52,24 @@ a{
     width: 40%;
     justify-content: space-between;
 }
+.main-nav li{
+    position: relative;
+}
+.main-nav a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -3px;
+    background-color: orange;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 1s ease;
+}
+.main-nav a:hover::before{
+    transform: scaleX(1);
+}
 .close, .burger{
     display: none;
     cursor: pointer;
@@ -67,10 +85,70 @@ a{
     text-transform: uppercase;
     transform: translateY(20vh);
     line-height: 1.5;
+}/* End of header styling */
+
+/* main styling section */
+.main{
+    margin-top: 2rem;
 }
-/* End of header styling */
+.interactive{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.interactive__image-container{
+    width: 100rem;
+}
+.interactive__image-container img{
+    max-width: 100%;
+    height: auto;
+}
+.interactive__content{
+    background-color: hsl(0, 0%, 100%);
+    padding: 3rem 0 0 5rem;
+    align-self: flex-end;
+    width: 100%;
+    position: relative;
+    left: -10rem;
+}
+.interactive__content .virtual{
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-family: var(--josefin);
+    color: hsl(0, 0%, 0%);
+    padding: 2rem 0;
+}
+.interactive__content:nth-child(2){
+    color: hsl(0, 0%, 55%);
+}
 
+/* footer styling */
 
+footer{
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+.logo-icons, .menu-copyright{
+    display: flex;
+    justify-content: space-between;
+}
+.icons img{
+    margin-right: 1.5rem;
+}
+.footer-menu ul{
+    display: flex;
+}
+.footer-menu ul li{
+    margin-right: 2rem;
+}
+.copyright{
+    color: hsl(0, 0%, 55%);
+}
+/* end of footer styling */
 @media screen and (max-width: 1024px){
     .main-nav{
         display: flex;
