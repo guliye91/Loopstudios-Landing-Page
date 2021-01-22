@@ -293,8 +293,9 @@ footer{
 }
 @media screen and (max-width: 576px){
    .container{
-       width: 30rem;
-       min-width: 30rem;
+       width: 35rem;
+       min-width: 35rem;
+       margin: 0;
    }
     #bg-hero{
         background-image: url('./images/mobile/image-hero.jpg');
