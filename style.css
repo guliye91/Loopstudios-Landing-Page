@@ -89,8 +89,16 @@ a{
     text-transform: uppercase;
     transform: translateY(20vh);
     line-height: 1.5;
+    /* animation: fadeIn 3s ease-in 1s forwards; */
 }/* End of header styling */
-
+@keyframes fadeIn{
+    from{
+        transform: translateY(-40rem);
+    }
+    to{
+        transform: translateY(initial);
+    }
+}
 /* main styling section */
 .main{
     margin-top: 8rem;
@@ -294,9 +302,8 @@ footer{
 }
 @media screen and (max-width: 576px){
    .container{
-       width: 35rem;
+       width: 50rem;
        min-width: 35rem;
-       margin: 0;
    }
     #bg-hero{
         background-image: url('./images/mobile/image-hero.jpg');
@@ -363,6 +370,10 @@ footer{
     }
 }
 @media screen and (max-width: 375px){
+    .container{
+        width: 35rem;
+        min-width: 35rem;
+    }
     .hero-text{
         width: 25rem;
         font-size: 2.2rem;
