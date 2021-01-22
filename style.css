@@ -319,6 +319,10 @@ footer{
     .grid{
         position: relative;
     }
+    .grid-title h3{
+        font-size: 2rem;
+        font-weight: 300;
+    }
     .grid-title .see-all{
         position: absolute;
         bottom: -4.4rem;
