@@ -11,6 +11,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 links.forEach((link)=>{
     link.addEventListener('click',()=>{
         menu.classList.remove('show');
+        burgerBtn.classList.remove('toggle');
     })
 })
 
