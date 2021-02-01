@@ -16,4 +16,5 @@ links.forEach((link)=>{
 
 burgerBtn.addEventListener('click',()=>{
     menu.classList.toggle('show');
+    burgerBtn.classList.toggle('toggle')
 })
